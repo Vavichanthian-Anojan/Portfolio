@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --text-color: #426696;
+  --glass-bg: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  --box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.05);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: #acb7e1;
+}
+::-webkit-scrollbar-thumb {
+  background: #4577af;
+  border-radius: 10px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.glass {
+  position: relative;
+  margin: 5% auto;
+  width: 80%;
+  min-height: 80vh;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+  padding: 0rem 1rem;
+}
+
+.main-links {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.main-links li {
+  list-style: none;
+}
+
+.main-links li a {
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(1rem);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 10px 0;
+  transition: 0.5s ease;
+}
+
+.main-profile-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.profile {
+  padding-top: 80px;
+  margin-bottom: 40px;
+}
+
+.main-profile {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-img {
+  width: 280px;
+}
+
+.profile-img img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.about-me {
+  padding-top: 60px;
+  margin-bottom: 40px;
+}
+
+.skill {
+  padding-top: 60px;
+}
+
+.profile .box {
+  background: var(--glass-bg);
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+  backdrop-filter: blur(1rem);
+  padding: 1rem;
+  width: 100%;
+}
+
+h1 {
+  color: var(--text-color) !important;
+  font-size: 30px !important;
+}
+
+.text-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+}
+
+.typewriter {
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #2575fc;
+  animation: cursor 1s step-start infinite, text 4s steps(20) alternate infinite;
+}
+
+.profile-link li {
+  list-style: none;
+  margin: 10px 0;
+  color: #000000;
+  font-size: 16px;
+}
+
+.profile-link li a {
+  color: #000000;
+}
+
+.profile-link li i {
+  color: var(--text-color);
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+@keyframes cursor {
+  0%,
+  100% {
+    border-color: #2575fc;
+  }
+}
+
+@keyframes text {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+.about-me .list {
+  background: var(--glass-bg);
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+  backdrop-filter: blur(1rem);
+  padding: 1rem;
+}
+
+.about-me .list p {
+  font-size: 15px;
+  color: #000000;
+}
+
+.heading .head {
+  background: var(--glass-bg);
+  background: var(--glass-bg);
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+  backdrop-filter: blur(1rem);
+  padding: 0.8rem 2rem;
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.heading i {
+  margin-right: 10px;
+}
+
+.technologies span {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.technologies ul li {
+  list-style: circle;
+  color: #000000;
+  margin: 10px 0px;
+}
+
+@media (max-width: 768px) {
+  .glass {
+    width: 90%;
+  }
+
+  .main-links {
+    right: 2%;
+  }
+
+  .main-links li a {
+    width: 35px;
+    height: 35px;
+  }
+  h1 {
+    text-align: center;
+  }
+
+  .heading .head {
+    padding: 0.8rem 1rem;
+  }
+
+  .profile-img {
+    margin-top: 30px;
+  }
+
+  .profile .box {
+    padding: 0.5rem;
+  }
+
+  .typewriter {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .typewriter {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .typewriter {
+    font-size: 1.02rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .profile-link li {
+    font-size: 14px;
+  }
+}
