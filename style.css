@@ -271,12 +271,6 @@ h1 {
 
 @media (max-width: 420px) {
   .typewriter {
-    font-size: 1.02rem;
-  }
-}
-
-@media (max-width: 350px) {
-  .profile-link li {
-    font-size: 14px;
+    font-size: 1.25rem;
   }
 }
